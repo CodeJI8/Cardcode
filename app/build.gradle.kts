@@ -1,7 +1,14 @@
 plugins {
     id("com.android.application")
+    id("org.jetbrains.kotlin.android")
     id("kotlin-parcelize")
     alias(libs.plugins.kotlin.compose)
+}
+
+kotlin {
+    compilerOptions {
+        jvmTarget.set(org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_19)
+    }
 }
 
 android {
@@ -10,8 +17,8 @@ android {
 
     defaultConfig {
         applicationId = "com.singleminds.cardcode"
-        minSdk = 26
-        targetSdk = 34
+        minSdk = 36
+        targetSdk = 36
         versionCode = 1
         versionName = "1.0"
 
@@ -29,9 +36,12 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
+        sourceCompatibility = JavaVersion.VERSION_19
+        targetCompatibility = JavaVersion.VERSION_19
     }
+
+
+
     packaging {
         resources {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"

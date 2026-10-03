@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.singleminds.cardcode">
 
     <application
         android:allowBackup="true"
@@ -9,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@android:style/Theme.NoTitleBar">
         <activity
-            android:name=".MainActivity"
+            android:name="com.singleminds.cardcode.MainActivity"
             android:exported="true"
             android:theme="@android:style/Theme.NoTitleBar"
             android:windowSoftInputMode="adjustResize">
